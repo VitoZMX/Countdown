@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.conteinerEntInfo,
+.conteinerForm {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.conteinerForm {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 3em;
+}
+
+label {
+    margin-bottom: 1em;
+}
+
+input,
+label {
+    font-size: 45px;
+    font-family: cursive;
+}
+
+input:first-child {
+    margin-left: 0.6em;
+}
+
+button {
+    font-size: 34px;
+    font-weight: bold;
+    font-family: cursive;
+    padding: 8px 40px;
+    text-transform: uppercase;
+}
+
+.timeFinish {
+    font-size: 240px;
+    font-family: cursive;
+}
+
+.text {
+    user-select: none;
+}
+
+.textPrj {
+    font-family: cursive;
+    font-size: 14px;
+    font-weight: lighter;
+    color: black;
+    text-align: right;
+}
+
+.NameMe {
+    margin-left: 5px;
+}
