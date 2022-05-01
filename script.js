@@ -33,6 +33,9 @@ function getMeTime(TrebTime) {
     if (res < 0) {
         res = (86400000 - NowTime) + TrebTime
     }
+    if(res === 0 ) {
+        alert("Время вышло!")
+    }
     msToTime(res)
 }
 
