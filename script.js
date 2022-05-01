@@ -25,17 +25,16 @@ function getTimeInp(TimeStr) {
 
 function getMeTime(TrebTime) {
     let time = new Date()
+    let sec = time.getSeconds()
     let min = time.getMinutes()
     let hr = time.getHours()
-    let NowTime = (hr * 3600000) + (min * 60000)
+    let NowTime = (hr * 3600000) + (min * 60000) + (sec * 1000)
     let res = TrebTime - NowTime
 
     if (res < 0) {
         res = (86400000 - NowTime) + TrebTime
     }
-    if (res === 0) {
-        alert("Время вышло!")
-    }
+
     console.log("До 00:00 осталось " + res / 1000 + " секунд")
     msToTime(res)
 }
@@ -43,17 +42,25 @@ function getMeTime(TrebTime) {
 function msToTime(duration) {
 
     let minutes = parseInt((duration / (1000 * 60)) % 60),
-        hours = parseInt((duration / (1000 * 60 * 60)) % 24)
+        hours = parseInt((duration / (1000 * 60 * 60)) % 24),
+        seconds = parseInt((duration / 1000) % 60)
 
     hours = (hours < 10) ? "0" + hours : hours
     minutes = (minutes < 10) ? "0" + minutes : minutes
+    seconds = (seconds < 10) ? "0" + seconds : seconds
 
-    let res = hours + ":" + minutes
+    let res = hours + ":" + minutes + ":" + seconds
 
     if (restart) {
         let RendrTimeConteiner = document.querySelector("#time");
         RendrTimeConteiner.innerHTML = res
-        setTimeout(reRanderTime, 5000)
+        if (hours === "00" && minutes=== "00" && seconds=== "00") {
+            // alert("Время вышло!")
+            RendrTimeConteiner.nextElementSibling.remove()
+            document.body.style.backgroundColor = 'red';
+            return
+        }
+        setTimeout(reRanderTime, 1000)
     } else {
         render(res)
     }
