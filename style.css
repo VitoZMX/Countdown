@@ -29,7 +29,7 @@ label {
 input,
 label {
     font-size: 45px;
-    font-family: cursive;
+    font-family: 'Stylish', sans-serif;
 }
 
 input:first-child {
@@ -39,14 +39,14 @@ input:first-child {
 button {
     font-size: 34px;
     font-weight: bold;
-    font-family: cursive;
+    font-family: 'Stylish', sans-serif;
     padding: 8px 40px;
     text-transform: uppercase;
 }
 
 .timeFinish {
     font-size: 240px;
-    font-family: cursive;
+    font-family: 'Stylish', sans-serif;
 }
 
 .text {
@@ -54,7 +54,7 @@ button {
 }
 
 .textPrj {
-    font-family: cursive;
+    font-family: 'Stylish', sans-serif;
     font-size: 14px;
     font-weight: lighter;
     color: black;
