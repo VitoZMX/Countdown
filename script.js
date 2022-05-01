@@ -54,7 +54,7 @@ function msToTime(duration) {
     if (restart) {
         let RendrTimeConteiner = document.querySelector("#time");
         RendrTimeConteiner.innerHTML = res
-        if (hours === "00" && minutes=== "00" && seconds=== "00") {
+        if (hours === "00" && minutes === "00" && seconds === "00") {
             // alert("Время вышло!")
             RendrTimeConteiner.nextElementSibling.remove()
             document.body.style.backgroundColor = 'red';
@@ -87,4 +87,3 @@ function render(str) {
 function reRanderTime() {
     getTimeInp(InpData.value)
 }
-
