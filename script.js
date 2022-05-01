@@ -33,9 +33,10 @@ function getMeTime(TrebTime) {
     if (res < 0) {
         res = (86400000 - NowTime) + TrebTime
     }
-    if(res === 0 ) {
+    if (res === 0) {
         alert("Время вышло!")
     }
+    console.log("До 00:00 осталось " + res / 1000 + " секунд")
     msToTime(res)
 }
 
@@ -52,7 +53,6 @@ function msToTime(duration) {
     if (restart) {
         let RendrTimeConteiner = document.querySelector("#time");
         RendrTimeConteiner.innerHTML = res
-        console.log(res)
         setTimeout(reRanderTime, 5000)
     } else {
         render(res)
