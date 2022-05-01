@@ -71,6 +71,10 @@ button {
     text-align: right;
 }
 
+.textPrj em {
+    cursor: pointer;
+}
+
 .NameMe {
     margin-left: 5px;
 }
